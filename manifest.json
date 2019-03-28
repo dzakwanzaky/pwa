@@ -1,0 +1,31 @@
+{
+  
+  "short_name": "Web Uy",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "pinguin32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "pinguin64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "pinguin144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "pinguin192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

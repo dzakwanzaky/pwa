@@ -22,10 +22,16 @@ const items = [
     name : "Spring",
     color : 'Hijau',
     img :'Semi.jpg'
-  }, {
+  }, 
+  {
     name : "Winter",
     color : 'Biru',
     img :'Salju.jpg'
+  },
+  {
+    name : "Calculator",
+    color : 'Grey',
+    img :''
   },
 ];
 

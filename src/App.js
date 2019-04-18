@@ -18,22 +18,36 @@ class App extends Component {
       name: menu.name,
       color: menu.color,
       img: menu.img,
+      angka1 : 0,
+      angka2 : 0,
+      hasil : 0
       //active: menu,
     });
   }
+  
 
   calculator(name){
     console.log(name);
     if(name == 'Calculator'){
-      //display calt
+      
       return (
         <div>
             <span className={"selected "+this.state.color}>{this.state.name}
             </span><br></br>
-            <input type="number" placeholder="angka 1"/>+
-            <input type="number" placeholder="angka 2"/>=
-            <span> ....</span><br></br>
-            <button>hitung</button>
+            <input type="number" placeholder="angka 1" value=
+             {this.state.angka1} onChange={this.changeHandler.bind(this)}/>
+            
+                  <select type="number" ref="operator" className="form-control" placeholder="input 1">
+                    <option value="+">+</option>
+                    <option value="-">+</option>
+                    <option value="*">x</option>
+                    <option value="/">/</option>
+                  </select>
+                
+            <input type="number" placeholder="angka 2" value=
+             {this.state.angka2} onChange={this.changeHandler.bind(this)}/>=
+            <span> {parseInt(this.state.angka1)} + {parseInt(this.state.angka2)} </span><br></br>
+           
        </div>
       )
     }else{
@@ -47,22 +61,18 @@ class App extends Component {
        </div> );
     }
   }
- /* menusaya(){
-    return <img src={this.state.active+".jpg"} width="200"></img>
-  }*/
- /* menusaya(){
-    var gambar;
-    if (this.state.active.toLocaleLowerCase() === 'merah'){
-      gambar = "apel";
-    }else if(this.state.active.toLocaleLowerCase() === 'kuning'){
-      gambar = "nanas";
-    }else if(this.state.active.toLocaleLowerCase() === 'hijau'){
-      gambar = "alpukat";
-    }else if(this.state.active.toLocaleLowerCase() === 'biru'){
-      gambar = "anggur";
-    }
-    return <img src={gambar+".jpg"} width="200"></img>
-  }*/
+
+  
+  changeHandler(event){
+    
+    this.setState({
+      angka1: event.target.value,
+    
+    });
+  }
+
+ 
+
   render() {
     return (
       <div id="app">

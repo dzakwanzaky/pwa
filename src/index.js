@@ -33,6 +33,11 @@ const items = [
     color : 'Grey',
     img :''
   },
+  {
+    name : "Profile",
+    color : 'Black',
+    img :''
+  },
 ];
 
 ReactDOM.render(<App items={items}/>,

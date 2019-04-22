@@ -22,7 +22,7 @@
   }
 
   .nav {
-    width: 500px;
+    
     margin: 20px auto;
     max-width: 48em;
     border: 1px solid #333;
@@ -59,6 +59,12 @@
   .Biru.is-active {
     background: #41aff4;
   }
+  .Grey.is-active {
+    background: #eaebec;
+  }
+  .Black.is-active {
+    background: #131414;
+  }
 
   .info {
     margin-top: 40px;
@@ -91,6 +97,13 @@
   .Biru.selected {
     background: #41aff4;
   }
+  .Grey.selected {
+    background: #eaebec;
+  }
+  .Black.selected {
+    background: #131414;
+  }
+
 
  /* .pic {
     display: block;

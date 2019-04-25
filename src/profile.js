@@ -8,7 +8,10 @@ class profile extends Component {
   
   render() {
     return (
+      <div>
+      <p>{this.props.alamat}</p>
       <img src="Salju.jpg"/>
+      </div>
     );
   }
 }

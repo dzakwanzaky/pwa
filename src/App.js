@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Profile from './profile.js';
+import Calculator from './calculator.js';
 
 
 class App extends Component {
@@ -10,8 +11,9 @@ class App extends Component {
 
     this.state = {
      // active : "Merah",
+     name: 'Summer',
      color: 'Merah',
-     img: 'merah.png'
+     img: 'Panas.jpg'
     };
   }
   clicked(menu){
@@ -20,11 +22,6 @@ class App extends Component {
       name: menu.name,
       color: menu.color,
       img: menu.img,
-      angka1 : 0,
-      angka2 : 0,
-      hasil : 0,
-      operation : 'plus'
-      //active: menu,
     });
   }
   
@@ -32,29 +29,10 @@ class App extends Component {
   calculator(name){
     console.log(name);
     if(name == 'Calculator'){
-      
-      return (
-        <div>
-            <span className={"selected "+this.state.color}>{this.state.name}
-            </span><br></br>
-            <input type="number" name="angka1" placeholder="angka 1"  value={this.state.angka1} onChange={this.changeHandler.bind(this)}/>
-            
-                  <select type="number" ref="operator" className="form-control" placeholder="input 1">
-                    <option value="plus">+</option>
-                    <option value="minus">+</option>
-                    <option value="pow">x</option>
-                    <option value="div">/</option>
-                  </select>
-                
-                  <input type="number" name="angka2" placeholder="angka 2"  value=
-                  {this.state.angka2} onChange={this.changeHandler.bind(this)}/>=
-                   <span> {this.hitung()}</span>
-           
-       </div>
-      )
-     
+        return <Calculator/>
     }else if(name == 'Profile'){
-      return <Profile/>
+      return <Profile alamat="ASTAGAAAAAAA"/>
+
     } else { 
       return( 
           <div>
@@ -64,26 +42,6 @@ class App extends Component {
           </div> );
     }
   }
-
-  
-  changeHandler(event){
-    
-    this.setState({
-     [event.target.name]: event.target.value
-    
-    });
-  }
-
-  hitung(){
-    switch(this.state.operation){
-      case 'plus': return parseInt(this.state.angka1) + parseInt(this.state.angka2);
-      case 'minus': return parseInt(this.state.angka1) - parseInt(this.state.angka2)
-      case 'pow': return parseInt(this.state.angka1) * parseInt(this.state.angka2)
-      case 'div': return parseInt(this.state.angka1) / parseInt(this.state.angka2)
-    }
-  }
-
- 
 
   render() {
     return (

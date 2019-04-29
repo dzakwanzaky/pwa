@@ -5,6 +5,8 @@ import Profile from './profile.js';
 import Calculator from './calculator.js';
 
 
+
+
 class App extends Component {
   constructor(props){
     super(props);
@@ -23,6 +25,8 @@ class App extends Component {
       color: menu.color,
       img: menu.img,
     });
+  
+
   }
   
 

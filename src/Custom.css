@@ -65,6 +65,9 @@
   .Black.is-active {
     background: #131414;
   }
+  .Purple.is-active {
+    background: #59139b;
+  }
 
   .info {
     margin-top: 40px;
@@ -102,6 +105,9 @@
   }
   .Black.selected {
     background: #131414;
+  }
+  .Purple.selected {
+    background: #59139b;
   }
 
 

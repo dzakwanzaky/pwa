@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Profile from './profile.js';
 import Calculator from './calculator.js';
+import Main from './Main.js';
 
 
 
@@ -36,7 +37,8 @@ class App extends Component {
         return <Calculator/>
     }else if(name == 'Profile'){
       return <Profile alamat="ASTAGAAAAAAA"/>
-
+    }else if(name == 'Random User'){
+      return <Main/>
     } else { 
       return( 
           <div>

@@ -38,6 +38,11 @@ const items = [
     color : 'Black',
     img :''
   },
+  {
+    name : "Random User",
+    color : 'Purple',
+    img :''
+  },
 ];
 
 ReactDOM.render(<App items={items}/>,
